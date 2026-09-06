@@ -14,6 +14,11 @@ let product = []
 
 //ROUTES
 
+app.get('/' ,(req, res) =>{
+res.send("API is running..Shop Backend is LIVE!")
+
+})
+
 //GET all products
 app.get('/api/products', async(req,res) => {
 try{
