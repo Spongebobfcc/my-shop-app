@@ -6,7 +6,10 @@ const Product = require("./models/product.model.js")
 const app = express()
 
 
-app.use(cors())
+app.use(cors({
+      origune:["https://my-shop-app-tqc9.onrender.com",", "http://localhost:5173"],
+      credentials: true
+})
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
