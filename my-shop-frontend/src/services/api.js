@@ -1,5 +1,5 @@
 import axios from 'axios'
-const API = 'http://102.135.168.149:5000' //This is your backend server
+const API = 'my-shop-qm1syyaym-spongebobfcc.vercel.app' //This is your backend server
 
 //Get all products
 export const getProducts = () => fetch(`${API}/api/products`).then(res => res.json())
