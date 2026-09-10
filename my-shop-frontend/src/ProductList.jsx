@@ -32,7 +32,7 @@ export default function ProductList() {
         <p>No products</p>
       ) : (
         <ul>
-          {products.map(p => <li key={p.id}>{p.name} - ${p.price}</li>)}
+          {products.map(p => <li key={p._id}>{p.name} - ${p.price}</li>)}
         </ul>
       )}
     </div>

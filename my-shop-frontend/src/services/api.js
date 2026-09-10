@@ -1,5 +1,5 @@
 import axios from 'axios'
-const API = 'my-shop-qm1syyaym-spongebobfcc.vercel.app' //This is your backend server
+const API = 'https://my-shop-qm1syyaym-spongebobfcc.vercel.app' //This is your backend server
 
 //Get all products
 export const getProducts = () => fetch(`${API}/api/products`).then(res => res.json())
@@ -12,4 +12,4 @@ export const addProduct = (product) => fetch(`${API}/api/products`, {
 }).then(res => res.json())
 
 //Delete a product
-export const deleteProduct = (id) => axios.delete('${API}/api/products/${id}')
+export const deleteProduct = (id) => axios.delete(`${API}/api/products/${id}`)
