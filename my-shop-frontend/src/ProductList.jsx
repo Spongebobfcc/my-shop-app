@@ -11,10 +11,13 @@ export default function ProductList() {
   }, [])
 
   const handleAdd = () => {
-    addProduct({ name, quantity: 1, price: 100 })
-      .then(newProduct => setProducts([...products, newProduct]))
-    setName("")
-  }
+  if (!name.trim()) return // don't add empty name
+  addProduct({ name, quantity: 1, price: 100 })
+    .then(newProduct => {
+      setProducts([...products, newProduct])
+      setName("")
+    })
+}
 
   return (
     <div style={{ padding: 20 }}>
