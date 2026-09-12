@@ -1,3 +1,4 @@
+
 const PORT = 5000
 const mongoose = require ("mongoose")
 const cors = require ("cors")
@@ -61,7 +62,7 @@ try{
 })
 
 //UPDATE A PRODUCT
-app.patch('/api/products', async(req,res) => {
+app.patch('/api/products/:id', async(req,res) => {
 try{
   const updatedProduct = await Product.findByIdAndUpdate(req.params.id, req.body)
   res.status(200).json(updatedProduct) 
@@ -71,17 +72,6 @@ try{
 }
 
 })
-
-//CONNECT TO DATABASE
-mongoose.connect("mongodb+srv://tenorbobyy_db_user:Africansmurfs.254@cluster0.c2cpv1w.mongodb.net/myapp?retryWrites=true&w=majority")
-.then(() => {
-            console.log("Server seccessfully connected to database")
-
-           // app.listen(PORT, '0.0.0.0', () => {
-             // console.log("Server is listening on port 5000")
-        //})
-})
- 
 
 //HEALTH CHECK ROUTE
 app.get('/api/health', async (req,res) => {
@@ -95,6 +85,17 @@ app.get('/api/health', async (req,res) => {
     isVercelConnected: state === 1
   })
 })
+
+//CONNECT TO DATABASE
+mongoose.connect("mongodb+srv://tenorbobyy_db_user:Africansmurfs.254@cluster0.c2cpv1w.mongodb.net/myapp?retryWrites=true&w=majority")
+.then(() => {
+            console.log("Server seccessfully connected to database")
+
+           // app.listen(PORT, '0.0.0.0', () => {
+             // console.log("Server is listening on port 5000")
+        //})
+})
+ 
 
 .catch((error) => {
      console.log("Database coonnection  failed", (error))
