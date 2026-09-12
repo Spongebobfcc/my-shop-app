@@ -16,7 +16,6 @@ app.use(express.urlencoded({extended: false}))
 let product = []
 
 //ROUTES
-
 app.get('/' ,(req, res) =>{
 res.send("API is running..Shop Backend is LIVE!")
 
@@ -82,13 +81,27 @@ mongoose.connect("mongodb+srv://tenorbobyy_db_user:Africansmurfs.254@cluster0.c2
              // console.log("Server is listening on port 5000")
         //})
 })
+ 
 
+//HEALTH CHECK ROUTE
+app.get('/api/health', async (req,res) => {
+  const state = mongoose.connection.readyState
+  // 0 = disconnected, 1 = connected, 2 = connecting, 3 = disconnecting
+  const status = { 0: "DISCONNECTED", 1: "CONNECTED", 2: "CONNECTING", 3: "DISCONNECTING" }
+
+  res.json({
+    dbStatus: status[state] || "UNKNOWN",
+    readyState: state,
+    isVercelConnected: state === 1
+  })
+})
 
 .catch((error) => {
      console.log("Database coonnection  failed", (error))
 
 
 })
+
 
 module.exports = app;
 //trigger redeploy
