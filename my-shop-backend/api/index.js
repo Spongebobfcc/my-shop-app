@@ -3,7 +3,7 @@ const PORT = 5000
 const mongoose = require ("mongoose")
 const cors = require ("cors")
 const express = require("express")
-const Product = require("./models/product.model.js")
+const Product = require("../models/product.model.js")
 const app = express()
 
 
@@ -11,6 +11,8 @@ app.use(cors({
       origin :["https://my-shop-app-tqc9.onrender.com","http://localhost:5173"],
       credentials: true
 })
+
+)
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
