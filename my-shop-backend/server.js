@@ -7,7 +7,7 @@ const app = express()
 
 
 app.use(cors({
-      origune:["https://my-shop-app-tqc9.onrender.com","http://localhost:5173"],
+      origin :["https://my-shop-app-tqc9.onrender.com","http://localhost:5173"],
       credentials: true
 })
 app.use(express.json())
@@ -77,9 +77,9 @@ mongoose.connect("mongodb+srv://tenorbobyy_db_user:Africansmurfs.254@cluster0.c2
 .then(() => {
             console.log("Server seccessfully connected to database")
 
-            app.listen(PORT, '0.0.0.0', () => {
-              console.log("Server is listening on port 5000")
-        })
+           // app.listen(PORT, '0.0.0.0', () => {
+             // console.log("Server is listening on port 5000")
+        //})
 })
 
 
