@@ -38,11 +38,11 @@ export default function App() {
         
         {/* HERO */}
         <div style={{ textAlign: 'center', maxWidth: 600, margin: '0 auto 40px' }}>
-          <h1 style={{ fontSize: 42, fontStyle: 'italic', fontWeight: 800, lineHeight: 1.1, margin: '0 0 12px', letterSpacing: '-1.5px', color: 'purple' }}>
+          <h1 style={{ fontSize: 42, fontStyle: 'italic', fontWeight: 1000, lineHeight: 1.1, margin: '0 0 12px', letterSpacing: '-1.5px', color: 'purple' }}>
             Fresh picks from the <span style={{ color: '#0a7' }}>Coast.</span>
           </h1>
-          <p style={{ color: '#6b7e71', fontSize: 16, lineHeight: 1.6, margin: '0 0 24px' }}>
-            Live inventory from your Vercel + MongoDB backend.
+          <p style={{ color: 'orange', fontSize: 36, fontWeight: 'bold',fontFamily: 'Helvetica', Arial, sans-serif'  // ✅,9 lineHeight: 1.6, margin: '0 0 24px' }}>
+            Taste the Tropics<br>Feel the Difference 
           </p>
 
           <button
