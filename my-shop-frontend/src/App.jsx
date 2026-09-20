@@ -23,8 +23,8 @@ export default function App() {
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             <span style={{ fontSize: 28 }}>🌴</span>
             <div>
-              <div style={{ margin: 0, fontSize: 20, fontWeight: 800, letterSpacing: '-0.5px' }}>Mare Tropical</div>
-              <div style={{ margin: 0, fontSize: 11, color: '#0a7', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase' }}>Shop</div>
+              <h3 style={{ margin: 0, fontSize: 20, fontWeight: 800, letterSpacing: '-0.5px' }}>Mare Tropical</h3>
+              <h2 style={{ margin: 0, fontSize: 11, color: '#0a7', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase' }}>Shop</h2>
             </div>
           </div>
           <div style={{ fontSize: 11, fontWeight: 700, color: '#0a7', background: '#e6f9f0', padding: '6px 12px', borderRadius: 20, border: '1px solid #d6efe0' }}>
@@ -42,7 +42,7 @@ export default function App() {
             Fresh picks from the <span style={{ color: '#0a7' }}>Coast.</span>
           </h1>
           <p style={{ color: 'orange', fontSize: 36, fontWeight: 'bold', fontFamily: 'Helvetica, Arial, sans-serif', lineHeight: 1.6, margin: '0 0 24px' }}>
-            <span>Taste the Tropics</span><br>Feel the Difference 
+            <span>Taste the Tropics</span></br>Feel the Difference 
           </p>
 
           <button
