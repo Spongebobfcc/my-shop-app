@@ -46,7 +46,7 @@ export default function App() {
           </p>
 
           <button
-            type='button',
+            
             aria-pressed={showProducts}
             onClick={() => setShowProducts(!showProducts)}
             style={{
