@@ -42,10 +42,12 @@ export default function App() {
             Fresh picks from the <span style={{ color: '#0a7' }}>Coast.</span>
           </h1>
           <p style={{ color: 'orange', fontSize: 36, fontWeight: 'bold', fontFamily: 'Helvetica, Arial, sans-serif', lineHeight: 1.6, margin: '0 0 24px' }}>
-            <span>Taste the Tropics</span></br>Feel the Difference 
+            <span>Taste the Tropics</span><br/>Feel the Difference 
           </p>
 
           <button
+            type='button',
+            aria-pressed={showProducts}
             onClick={() => setShowProducts(!showProducts)}
             style={{
               padding: '14px 28px',
