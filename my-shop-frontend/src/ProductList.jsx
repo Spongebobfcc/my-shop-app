@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const API_URL = "https://my-shop-kllee4kbb-spongebobfcc.vercel.app/api/products"
+const API_URL = "my-shop-mwh3hsjm6-spongebobfcc.vercel.app/api/products"
 
 const icons = {
   Laptop: "💻",
