@@ -31,7 +31,7 @@ export default function ProductList() {
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
         <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700 }}>Inventory ({products.length})</h3>
-        <span style={{ fontSize: 12, background: '#0a7', color: 'white', padding: '4px 10px', borderRadius: 20 }}>MongoDB Live</span>
+        <span style={{ fontSize: 13, background: '#0a7', color: 'yellow', padding: '4px 10px', borderRadius: 20 }}>Menu</span>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 16 }}>
@@ -76,7 +76,7 @@ export default function ProductList() {
                 borderRadius: 20,
                 cursor: 'pointer'
               }}>
-                View
+                Place Order
               </div>
             </div>
           </div>
